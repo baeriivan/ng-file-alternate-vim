@@ -40,10 +40,10 @@ function! Gotostylefile()
   exec "edit " . l:file
 endfunction
 
-nnoremap <leader>hh :call Gotohtmlfile()<cr>
-nnoremap <leader>jj :call Gotoscriptfile()<cr>
-nnoremap <leader>kk :call Gototestfile()<cr>
-nnoremap <leader>ll :call Gotostylefile()<cr>
+nnoremap <silent> <leader>hh :call Gotohtmlfile()<cr>
+nnoremap <silent> <leader>jj :call Gotoscriptfile()<cr>
+nnoremap <silent> <leader>kk :call Gototestfile()<cr>
+nnoremap <silent> <leader>ll :call Gotostylefile()<cr>
 
 " nnoremap <Plug>GoToHtmlNgFileAlternate   :call Gotohtmlfile()<cr>
 " nnoremap <Plug>GoToScriptNgFileAlternate :call Gotoscriptfile()<cr>
