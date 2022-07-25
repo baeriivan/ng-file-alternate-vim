@@ -21,22 +21,22 @@ function! s:gettargetbasename()
 endfunction
 
 function! Gotohtmlfile()
-  let l:file = s:gettargetbasename() . s:htmlfiletype
+  let l:file = s:gettargetbasename() . g:ng_file_alternate_htmlfiletype
   exec "edit " . l:file
 endfunction
 
 function! Gotoscriptfile()
-  let l:file = s:gettargetbasename() . s:scriptfiletype
+  let l:file = s:gettargetbasename() . g:ng_file_alternate_scriptfiletype
   exec "edit " . l:file
 endfunction
 
 function! Gototestfile()
-  let l:file = s:gettargetbasename() . s:testfiletype
+  let l:file = s:gettargetbasename() . g:ng_file_alternate_testfiletype
   exec "edit " . l:file
 endfunction
 
 function! Gotostylefile()
-  let l:file = s:gettargetbasename() . s:stylefiletype
+  let l:file = s:gettargetbasename() . g:ng_file_alternate_stylefiletype
   exec "edit " . l:file
 endfunction
 
