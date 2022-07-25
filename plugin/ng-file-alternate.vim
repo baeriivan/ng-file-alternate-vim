@@ -7,10 +7,10 @@ if exists("g:loaded_ng_file_alternate")
 endif
 let g:loaded_ng_file_alternate = 1
 
-let g:ng_file_alternate_htmlfiletype = ".html"
-let g:ng_file_alternate_scriptfiletype = ".ts"
-let g:ng_file_alternate_testfiletype = ".spec.ts"
-let g:ng_file_alternate_stylefiletype = ".css"
+let s:ng_file_alternate_htmlfiletype = get(g:, 'ng_file_alternate_htmlfiletype', ".html")
+let s:ng_file_alternate_scriptfiletype = get(g:, 'ng_file_alternate_scriptfiletype', ".ts")
+let s:ng_file_alternate_testfiletype = get(g:, 'ng_file_alternate_testfiletype', "spec.ts")
+let s:ng_file_alternate_stylefiletype = get(g:, 'ng_file_alternate_stylefiletype', ".css")
 
 function! s:gettargetbasename()
   let l:base = expand('%:r')
@@ -21,22 +21,22 @@ function! s:gettargetbasename()
 endfunction
 
 function! Gotohtmlfile()
-  let l:file = s:gettargetbasename() . g:ng_file_alternate_htmlfiletype
+  let l:file = s:gettargetbasename() . s:ng_file_alternate_htmlfiletype
   exec "edit " . l:file
 endfunction
 
 function! Gotoscriptfile()
-  let l:file = s:gettargetbasename() . g:ng_file_alternate_scriptfiletype
+  let l:file = s:gettargetbasename() . s:ng_file_alternate_scriptfiletype
   exec "edit " . l:file
 endfunction
 
 function! Gototestfile()
-  let l:file = s:gettargetbasename() . g:ng_file_alternate_testfiletype
+  let l:file = s:gettargetbasename() . s:ng_file_alternate_testfiletype
   exec "edit " . l:file
 endfunction
 
 function! Gotostylefile()
-  let l:file = s:gettargetbasename() . g:ng_file_alternate_stylefiletype
+  let l:file = s:gettargetbasename() . s:ng_file_alternate_stylefiletype
   exec "edit " . l:file
 endfunction
 
