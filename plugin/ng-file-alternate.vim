@@ -1,16 +1,16 @@
 " ng-file-alternate.vim
 " Author:       Ivan Baeriswyl <https://baeriivan.github.io/>
-" Version:      0.1
+" Version:      0.2
 
 if exists("g:loaded_ng_file_alternate")
   finish
 endif
 let g:loaded_ng_file_alternate = 1
 
-let s:htmlfiletype = ".html"
-let s:scriptfiletype = ".ts"
-let s:testfiletype = ".spec.ts"
-let s:stylefiletype = ".css"
+let g:ng_file_alternate_htmlfiletype = ".html"
+let g:ng_file_alternate_scriptfiletype = ".ts"
+let g:ng_file_alternate_testfiletype = ".spec.ts"
+let g:ng_file_alternate_stylefiletype = ".css"
 
 function! s:gettargetbasename()
   let l:base = expand('%:r')
