@@ -9,7 +9,7 @@ let g:loaded_ng_file_alternate = 1
 
 let s:ng_file_alternate_htmlfiletype = get(g:, 'ng_file_alternate_htmlfiletype', ".html")
 let s:ng_file_alternate_scriptfiletype = get(g:, 'ng_file_alternate_scriptfiletype', ".ts")
-let s:ng_file_alternate_testfiletype = get(g:, 'ng_file_alternate_testfiletype', "spec.ts")
+let s:ng_file_alternate_testfiletype = get(g:, 'ng_file_alternate_testfiletype', ".spec.ts")
 let s:ng_file_alternate_stylefiletype = get(g:, 'ng_file_alternate_stylefiletype', ".css")
 
 function! s:gettargetbasename()
